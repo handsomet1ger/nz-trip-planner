@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>新西兰南岛中东环线旅行计划</title>
+  <style>
+    :root{--green:#0f3f31;--mint:#dfeee6;--paper:#fffdfa;--soft:#f5f1e8;--line:#d9dfd6;--gold:#c5792b;--text:#1d3029;--muted:#6b756f}
+    *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#f5f1e8,#fffdfa);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit} button{font:inherit}.gate{min-height:100vh;display:grid;place-items:center;padding:24px}.gate-card{width:min(440px,100%);background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 18px 50px #20352822}.gate-card h1{margin:8px 0;font-size:30px}.gate-card input,.gate-card button{width:100%;min-height:52px;border-radius:15px}.gate-card input{border:1px solid var(--line);padding:0 14px;margin:12px 0}.gate-card button{border:0;background:var(--green);color:white;font-weight:900}.app{display:none;padding:0 18px 34px}.topbar{position:sticky;top:0;z-index:10;margin:0 -18px 20px;padding:18px 20px;background:var(--green);color:white;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 12px 36px #0f3f3130}.brand{display:flex;gap:12px;align-items:center}.logo{display:grid;place-items:center;width:54px;height:54px;border-radius:17px;background:var(--mint);color:var(--green);font-weight:950}.brand strong{display:block;font-size:20px}.brand small{opacity:.75}.switch{display:flex;background:#ffffff24;border-radius:999px;padding:5px}.switch button{border:0;border-radius:999px;background:transparent;color:white;padding:10px 18px;font-weight:900}.switch button.active{background:white;color:var(--green)}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch;margin:20px 0}.hero-copy,.summary-card,.route-section,.day-card,.booking{background:var(--paper);border:1px solid var(--line);border-radius:22px;box-shadow:0 14px 38px #2a3e3318}.hero-copy{padding:30px}.hero h1{font-size:42px;margin:8px 0}.eyebrow,.date,.code{color:var(--gold);font-size:13px;font-weight:950;letter-spacing:.08em;text-transform:uppercase}.hero img{width:100%;height:100%;min-height:280px;object-fit:cover;border-radius:22px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chips span{background:#eef5ef;border-radius:999px;padding:8px 12px;font-weight:800}.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.summary-card{padding:18px}.summary-card span{display:block;color:var(--muted);font-size:13px;font-weight:850}.summary-card strong{display:block;margin-top:6px;color:var(--green)}
+    .view{display:none}.view.active{display:block}.route-section{margin:22px 0;padding:18px}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:14px}.section-head p{margin:0;color:var(--gold);font-weight:900}.section-head h2{margin:4px 0 0;font-size:28px}.section-head span{font-weight:900;color:var(--green)}.route-shell{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch}.dashboard,.visual-map{min-height:560px;background:#f9faf6;border:1px solid var(--line);border-radius:18px;padding:18px}.dashboard{overflow:auto}.intro h1{margin:5px 0;font-size:28px}.day-nav{display:flex;gap:8px;overflow:auto;padding:8px 0;position:sticky;top:0;background:#f9faf6}.day-nav button{flex:0 0 auto;border:1px solid var(--line);background:white;border-radius:999px;padding:8px 12px;font-weight:900;color:var(--green)}.day-nav button.active{background:var(--green);color:white}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}.metric{background:white;border:1px solid var(--line);border-radius:14px;padding:11px}.metric span{display:block;color:var(--muted);font-size:12px;font-weight:800}.metric strong{display:block;margin-top:4px;font-size:13px}.stop-list,.leg-list{display:grid;gap:8px;margin:12px 0}.stop,.leg{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:8px;background:white;border:1px solid var(--line);border-radius:13px;padding:9px}.stop b{display:grid;place-items:center;background:var(--green);color:white;border-radius:99px;width:28px;height:28px}.stop a{color:var(--gold);font-weight:900}.leg{grid-template-columns:86px 1fr}.leg span{border-radius:99px;padding:7px 8px;text-align:center;font-size:12px;font-weight:950}.leg .walk{background:#e2f3ea;color:#0f5f3c}.leg .drive{background:#fff0df;color:#9b3d05}.visual-map{overflow:hidden}.visual-map svg{width:100%;height:100%;min-height:520px;background:radial-gradient(circle at 20% 20%,#fff 0 8%,transparent 9%),linear-gradient(135deg,#dbeaf4,#f8f6ee);border-radius:16px}.route-line{fill:none;stroke:#f97316;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.map-dot{fill:var(--green);stroke:white;stroke-width:4}.map-dot.active{fill:#f97316}.map-label{font-size:13px;font-weight:900;fill:#163b30}.map-leg{font-size:12px;font-weight:950;fill:#8a3b09}
+    .content{display:grid;grid-template-columns:300px 1fr;gap:20px}.toc{position:sticky;top:96px;max-height:calc(100vh - 120px);overflow:auto;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:18px}.toc h2{margin:0 0 12px;color:var(--green)}.toc h3{margin:16px 0 8px;color:var(--gold);font-size:13px}.toc a{display:grid;grid-template-columns:42px 1fr;gap:8px;align-items:center;text-decoration:none;background:white;border:1px solid var(--line);border-radius:13px;padding:10px;margin:7px 0}.toc span{display:grid;place-items:center;background:var(--green);color:white;border-radius:99px;width:30px;height:30px;font-weight:900}.day-card{display:grid;grid-template-columns:320px 1fr;gap:18px;margin-bottom:18px;padding:18px}.day-card figure{margin:0}.day-card img{width:100%;height:260px;object-fit:cover;border-radius:16px}.day-card figcaption{font-size:12px;color:var(--muted);margin-top:6px}.day-card h2{margin:4px 0 8px;font-size:28px}.lead{color:var(--muted);line-height:1.75}.facts{display:flex;flex-wrap:wrap;gap:8px}.facts span{background:#eef5ef;border-radius:999px;padding:8px 10px;font-size:13px;font-weight:800}.day-card li{margin:8px 0;line-height:1.65}.day-card ol{padding-left:20px}.day-card ul{padding-left:20px}.booking{padding:18px;margin-bottom:18px}.booking-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.booking-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}.booking-card h3{margin:0 0 8px;color:var(--green)}
+    @media(max-width:900px){.topbar{align-items:flex-start;flex-direction:column}.hero,.route-shell,.content,.day-card{grid-template-columns:1fr}.summary,.booking-grid,.metrics{grid-template-columns:1fr 1fr}.toc{position:relative;top:auto;max-height:45vh}.dashboard,.visual-map{min-height:auto}.visual-map svg{min-height:420px}.hero h1{font-size:32px}}
+    @media(max-width:560px){.app{padding:0 12px 24px}.topbar{margin:0 -12px 16px}.brand strong{font-size:17px}.switch{width:100%}.switch button{flex:1}.summary,.booking-grid,.metrics{grid-template-columns:1fr}.hero-copy{padding:22px}.day-card img{height:220px}}
+  </style>
+</head>
+<body>
+  <main class="gate" id="gate"><section class="gate-card"><p class="eyebrow">PRIVATE TRIP PLAN</p><h1>新西兰南岛中东环线旅行计划</h1><p>请输入访客密码查看 11.14-11.28 悉尼 + 新西兰完整行程。</p><form id="gateForm"><input id="passcode" inputmode="numeric" placeholder="请输入 4 位密码" type="password"><button>进入行程</button></form><p id="error" style="display:none;color:#b42318;font-weight:900">密码不对，请再试一次。</p></section></main>
+  <main class="app" id="app">
+    <header class="topbar"><div class="brand"><span class="logo">NZ</span><div><strong>新西兰南岛中东环线旅行计划</strong><small>11.14-11.28 · 悉尼会合 + 南岛自驾</small></div></div><nav class="switch"><button class="active" data-view="map">地图版</button><button data-view="text">文字版</button></nav></header>
+    <section class="hero"><div class="hero-copy"><p class="eyebrow">11.14-11.28 · SYDNEY + SOUTH ISLAND</p><h1>新西兰南岛中东环线旅行计划</h1><p class="lead">备用 GitHub Pages 静态版：给朋友直接打开查看，保留密码、地图路线、每日计划、餐厅建议和 Google Maps 外链。</p><div class="chips"><span>悉尼 S1-S3</span><span>新西兰 D1-D12</span><span>中线进 · 东线返</span><span>密码 0000</span></div></div><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=80" alt="新西兰雪山湖泊"></section>
+    <section class="summary"><div class="summary-card"><span>出发</span><strong>悉尼会合后飞 CHC</strong></div><div class="summary-card"><span>路线</span><strong>中线进 · 东线返</strong></div><div class="summary-card"><span>节奏</span><strong>12 天完整计划</strong></div><div class="summary-card"><span>地图</span><strong>Google 搜索外链</strong></div></section>
+    <section class="view active" id="mapView">
+    <section class="route-section" data-segment="sydney">
+      <div class="section-head"><div><p>SYDNEY · 11.14-11.16</p><h2>悉尼段</h2></div><span>3 天</span></div>
+      <div class="route-shell">
+        <aside class="dashboard">
+          <div class="intro"><p class="date">11月14日｜悉尼会合</p><h1>南半球会合夜</h1><p>Jessie 14:00 抵达悉尼，下午只安排轻购物和休息，晚上暂定悉尼歌剧院芭蕾，不把第一天压得太满。</p></div>
+          <div class="day-nav"><button class="active" data-day="S1">S1</button><button class="" data-day="S2">S2</button><button class="" data-day="S3">S3</button></div>
+          <div class="day-info"></div>
+        </aside>
+        <section class="visual-map"><svg viewBox="0 0 640 420" role="img" aria-label="悉尼段路线图"></svg></section>
+      </div>
+    </section>
+    <section class="route-section" data-segment="nz">
+      <div class="section-head"><div><p>SOUTH ISLAND · 11.17-11.28</p><h2>新西兰段</h2></div><span>12 天</span></div>
+      <div class="route-shell">
+        <aside class="dashboard">
+          <div class="intro"><p class="date">11月17日｜基督城</p><h1>基督城温柔开场</h1><p>正式开始新西兰段。今天不跨城赶路，重点是取车、熟悉右舵、逛纸板教堂和雅芳河，把自驾状态调整好。</p></div>
+          <div class="day-nav"><button class="active" data-day="D1">D1</button><button class="" data-day="D2">D2</button><button class="" data-day="D3">D3</button><button class="" data-day="D4">D4</button><button class="" data-day="D5">D5</button><button class="" data-day="D6">D6</button><button class="" data-day="D7">D7</button><button class="" data-day="D8">D8</button><button class="" data-day="D9">D9</button><button class="" data-day="D10">D10</button><button class="" data-day="D11">D11</button><button class="" data-day="D12">D12</button></div>
+          <div class="day-info"></div>
+        </aside>
+        <section class="visual-map"><svg viewBox="0 0 640 420" role="img" aria-label="新西兰段路线图"></svg></section>
+      </div>
+    </section></section>
+    <section class="view" id="textView"><div class="content"><aside class="toc"><h2>逐日目录</h2><h3>澳大利亚 · 悉尼</h3><a href="#s1"><span>S1</span><strong>南半球会合夜</strong></a><a href="#s2"><span>S2</span><strong>悉尼封面照一日</strong></a><a href="#s3"><span>S3</span><strong>海边半日逃跑计划</strong></a><h3>新西兰 · 南岛</h3><a href="#d1"><span>D1</span><strong>基督城温柔开场</strong></a><a href="#d2"><span>D2</span><strong>蓝湖星空初体验</strong></a><a href="#d3"><span>D3</span><strong>库克山封神日</strong></a><a href="#d4"><span>D4</span><strong>瓦纳卡松弛日</strong></a><a href="#d5"><span>D5</span><strong>山路小镇电影感</strong></a><a href="#d6"><span>D6</span><strong>皇后镇尖叫第一弹</strong></a><a href="#d7"><span>D7</span><strong>皇后镇尖叫第二弹</strong></a><a href="#d8"><span>D8</span><strong>皇后镇回血日</strong></a><a href="#d9"><span>D9</span><strong>从山湖开到海风</strong></a><a href="#d10"><span>D10</span><strong>东海岸动物运气日</strong></a><a href="#d11"><span>D11</span><strong>企鹅夜后的收尾路</strong></a><a href="#d12"><span>D12</span><strong>不冒险的返程日</strong></a></aside><section><article class="booking"><h2>待补充的私人信息</h2><div class="booking-grid"><div class="booking-card"><h3>交通 / 租车</h3><ul><li>上海 / 菲律宾 → 悉尼航班</li><li>悉尼 → 基督城航班</li><li>基督城 → 上海返程航班</li><li>新西兰租车订单</li><li>机场接驳 / 还车时间</li></ul></div><div class="booking-card"><h3>酒店住宿</h3><ul><li>悉尼酒店</li><li>基督城 D1 酒店</li><li>蒂卡波湖酒店</li><li>特威泽尔酒店</li><li>瓦纳卡酒店</li><li>皇后镇酒店</li><li>但尼丁酒店</li><li>奥马鲁酒店</li><li>基督城返程前酒店</li></ul></div><div class="booking-card"><h3>游玩项目</h3><ul><li>悉尼歌剧院芭蕾票</li><li>Tekapo 观星</li><li>塔斯曼冰川直升机徒步 / 胡克谷备选</li><li>皇后镇跳伞</li><li>Skyline Gondola + Luge</li><li>Nevis Catapult + Swing</li><li>Shotover Jet</li><li>Oamaru 小蓝企鹅归巢</li><li>Onsen Hot Pools 备选</li></ul></div><div class="booking-card"><h3>餐厅预订</h3><ul><li>悉尼演出日前后晚餐</li><li>Kohan / Tekapo 晚餐</li><li>Kai KikoKiko Queenstown</li><li>Little India Dunedin</li><li>Fleur’s Place / Moeraki 备选</li><li>Oamaru 企鹅前晚餐</li></ul></div><div class="booking-card"><h3>证件 / 出行资料</h3><ul><li>澳大利亚入境材料</li><li>NZeTA / 新西兰入境材料</li><li>旅行保险</li><li>驾照翻译件 / 国际驾照</li><li>活动确认邮件和取消政策</li></ul></div></div></article><h2>澳大利亚 · 悉尼段</h2>
+    <article class="day-card" id="s1">
+      <figure><img src="https://images.unsplash.com/photo-1523428096881-5bd79d043006?auto=format&fit=crop&w=1200&q=80" alt="落地购物 · 歌剧院芭蕾夜"><figcaption>Sydney Harbour · Unsplash</figcaption></figure>
+      <div>
+        <p class="code">S1 · 11月14日｜悉尼会合</p>
+        <h2>落地购物 · 歌剧院芭蕾夜</h2>
+        <p class="lead">Jessie 14:00 抵达悉尼，下午只安排轻购物和休息，晚上暂定悉尼歌剧院芭蕾，不把第一天压得太满。</p>
+        <div class="facts"><span>路线：悉尼机场 → CBD → 歌剧院</span><span>住宿：悉尼 CBD / Circular Quay 周边</span><span>节奏：落地缓冲</span></div>
+        <h3>时间安排</h3>
+        <ol><li><strong>14:00</strong><span>Jessie 抵达悉尼，完成入境、取行李和会合</span></li><li><strong>16:30</strong><span>QVB / Pitt Street Mall / Westfield Sydney 轻购物</span></li><li><strong>18:00</strong><span>CBD 简单晚餐，尽量别离歌剧院太远</span></li><li><strong>19:30</strong><span>暂定悉尼歌剧院芭蕾《Copland Dance Episodes》</span></li></ol>
+        <h3>备选方案</h3>
+        <ul><li>如果落地疲惫，取消演出，只保留 Circular Quay 夜景和早休息。</li></ul>
+        <h3>拍照机位</h3>
+        <ul><li>歌剧院台阶仰拍</li><li>Circular Quay 远景合照</li><li>海港大桥夜景人像</li></ul>
+        <h3>餐厅建议</h3>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&query=Bennelong%20Sydney%20Australia" target="_blank" rel="noreferrer">Bennelong</a>：歌剧院内正式餐，适合仪式感晚餐</li><li><a href="https://www.google.com/maps/search/?api=1&query=Chat%20Thai%20Circular%20Quay%20Sydney%20Australia" target="_blank" rel="noreferrer">Chat Thai Circular Quay</a>：港口附近热门泰餐，适合演出前后</li><li><a href="https://www.google.com/maps/search/?api=1&query=Din%20Tai%20Fung%20World%20Square%20Sydney%20Australia" target="_blank" rel="noreferrer">Din Tai Fung World Square</a>：CBD 稳定选择，适合刚落地不想冒险</li></ul>
+      </div>
+    </article>
+    <article class="day-card" id="s2">
+      <figure><img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1200&q=80" alt="海德公园 · 植物园 · 海港经典线"><figcaption>Sydney Opera House · Unsplash</figcaption></figure>
+      <div>
+        <p class="code">S2 · 11月15日｜悉尼市区</p>
+        <h2>海德公园 · 植物园 · 海港经典线</h2>
+        <p class="lead">把悉尼最经典的市区景点集中在一天完成，动线顺、拍照点密集，晚上留给轻松晚餐和港口夜景。</p>
+        <div class="facts"><span>路线：Hyde Park → St Mary’s → Art Gallery → Royal Botanic Garden → Circular Quay</span><span>住宿：悉尼</span><span>节奏：全天 City Walk</span></div>
+        <h3>时间安排</h3>
+        <ol><li><strong>09:30</strong><span>海德公园和圣玛丽大教堂</span></li><li><strong>11:00</strong><span>新南威尔士美术馆短逛</span></li><li><strong>13:30</strong><span>皇家植物园散步到 Mrs Macquarie’s Chair</span></li><li><strong>16:30</strong><span>Circular Quay、歌剧院和海港大桥拍照</span></li></ol>
+        <h3>备选方案</h3>
+        <ul><li>雨天把植物园压缩，增加 QVB、The Strand Arcade 或美术馆时间。</li></ul>
+        <h3>拍照机位</h3>
+        <ul><li>Mrs Macquarie’s Chair 拍歌剧院+海港大桥同框</li><li>圣玛丽大教堂正面广角</li><li>皇家植物园草坪港口背景</li></ul>
+        <h3>餐厅建议</h3>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&query=The%20Grounds%20of%20the%20City%20Sydney%20Australia" target="_blank" rel="noreferrer">The Grounds of the City</a>：CBD 复古风 brunch，适合拍照</li><li><a href="https://www.google.com/maps/search/?api=1&query=Opera%20Bar%20Sydney%20Australia" target="_blank" rel="noreferrer">Opera Bar</a>：歌剧院旁海港景观，适合傍晚</li><li><a href="https://www.google.com/maps/search/?api=1&query=Mr.%20Wong%20Sydney%20Australia" target="_blank" rel="noreferrer">Mr. Wong</a>：CBD 热门中餐，适合正式晚餐</li></ul>
+      </div>
+    </article>
+    <article class="day-card" id="s3">
+      <figure><img src="https://images.unsplash.com/photo-1533827432537-70133748f5c8?auto=format&fit=crop&w=1200&q=80" alt="Bondi 海岸线 · 晚飞基督城"><figcaption>Bondi Coast · Unsplash</figcaption></figure>
+      <div>
+        <p class="code">S3 · 11月16日｜悉尼 → 基督城</p>
+        <h2>Bondi 海岸线 · 晚飞基督城</h2>
+        <p class="lead">白天按天气二选一，晚上三人一起从悉尼飞基督城，保证 11月17日新西兰 D1 能从容开始。</p>
+        <div class="facts"><span>路线：Bondi / Taronga Zoo → Sydney Airport → Christchurch</span><span>住宿：基督城</span><span>节奏：半日游 + 转场</span></div>
+        <h3>时间安排</h3>
+        <ol><li><strong>09:30</strong><span>天气好走 Bondi Beach → Tamarama → Bronte 短徒步</span></li><li><strong>12:30</strong><span>海边午餐或咖啡</span></li><li><strong>15:30</strong><span>回酒店取行李，前往悉尼机场</span></li><li><strong>晚上</strong><span>悉尼飞基督城，抵达后入住休息</span></li></ol>
+        <h3>备选方案</h3>
+        <ul><li>天气一般改 Taronga Zoo 半日；如果晚航班很早，海边只去 Bondi 拍照不徒步。</li></ul>
+        <h3>拍照机位</h3>
+        <ul><li>Bondi Icebergs 俯拍泳池和海</li><li>Tamarama 观景台</li><li>Bronte 海边岩石和草坪</li></ul>
+        <h3>餐厅建议</h3>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&query=Bills%20Bondi%20Sydney%20Australia" target="_blank" rel="noreferrer">Bills Bondi</a>：海边 brunch 候选</li><li><a href="https://www.google.com/maps/search/?api=1&query=Icebergs%20Dining%20Room%20Sydney%20Australia" target="_blank" rel="noreferrer">Icebergs Dining Room</a>：Bondi 景观餐厅，预算较高</li><li><a href="https://www.google.com/maps/search/?api=1&query=Lox%20Stock%20%26%20Barrel%20Sydney%20Australia" target="_blank" rel="noreferrer">Lox Stock &amp; Barrel</a>：Bondi 轻食咖啡</li></ul>
+      </div>
+    </article><h2>新西兰 · 南岛段</h2>
+    <article class="day-card" id="d1">
+      <figure><img src="https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?auto=format&fit=crop&w=1200&q=80" alt="纸板教堂 · 复古电车 · 雅芳河"><figcaption>Christchurch · Unsplash</figcaption></figure>
+      <div>
+        <p class="code">D1 · 11月17日｜基督城</p>
+        <h2>纸板教堂 · 复古电车 · 雅芳河</h2>
+        <p class="lead">正式开始新西兰段。今天不跨城赶路，重点是取车、熟悉右舵、逛纸板教堂和雅芳河，把自驾状态调整好。</p>
+        <div class="facts"><span>路线：基督城市区轻松适应</span><span>住宿：基督城</span><span>节奏：取车补给</span></div>
+        <h3>时间安排</h3>
+        <ol><li><strong>09:30</strong><span>取车、检查车况、熟悉右舵驾驶</span></li><li><strong>11:00</strong><span>纸板教堂和新摄政街</span></li><li><strong>14:00</strong><span>复古电车、雅芳河、植物园</span></li><li><strong>17:30</strong><span>超市补给，准备后续自驾早餐和路餐</span></li></ol>
+        <h3>备选方案</h3>
+        <ul><li>如果前一晚航班延误，压缩市区，只保留纸板教堂、超市和早休息。</li></ul>
+        <h3>拍照机位</h3>
+        <ul><li>纸板教堂正面几何线条</li><li>New Regent Street 彩色立面</li><li>雅芳河桥边人像</li></ul>
+        <h3>餐厅建议</h3>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&query=Riverside%20Market%20New%20Zealand" target="_blank" rel="noreferrer">Riverside Market</a>：选择多，适合多人各吃各的</li><li><a href="https://www.google.com/maps/search/?api=1&query=Twenty%20Seven%20Steps%20New%20Zealand" target="_blank" rel="noreferrer">Twenty Seven Steps</a>：市中心评价稳定，适合晚餐</li><li><a href="https://www.google.com/maps/search/?api=1&query=Little%20High%20Eatery%20New%20Zealand" target="_blank" rel="noreferrer">Little High Eatery</a>：轻松美食广场，适合第一天</li></ul>
+      </div>
+    </article>
+    <article class="day-card" id="d2">
+      <figure><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80" alt="肉派小镇 · 牧羊人教堂 · 观星"><figcaption>Lake Tekapo · Unsplash</figcaption></figure>
+      <div>
+        <p class="code">D2 · 11月18日｜基督城 → 蒂卡波湖</p>
+        <h2>肉派小镇 · 牧羊人教堂 · 观星</h2>
+        <p class="lead">从基督城进入中线湖区，中途吃 Fairlie Bakehouse 肉派，下午留给牧羊人教堂和湖边步道，晚上看天气安排观星。</p>
+        <div class="facts"><span>路线：基督城 → Fairlie → Lake Tekapo</span><span>住宿：蒂卡波湖</span><span>节奏：约 3-3.5 小时驾驶</span></div>
+        <h3>时间安排</h3>
+        <ol><li><strong>08:30</strong><span>基督城出发</span></li><li><strong>11:00</strong><span>Fairlie Bakehouse 肉派早餐/早午餐</span></li><li><strong>13:00</strong><span>抵达蒂卡波湖，湖边步道和牧羊人教堂</span></li><li><strong>20:30</strong><span>Tekapo 观星，按当天云量确认</span></li></ol>
+        <h3>备选方案</h3>
+        <ul><li>云多或下雨改 Tekapo Springs；牧羊人教堂可放 D3 清晨补拍。</li></ul>
+        <h3>拍照机位</h3>
+        <ul><li>牧羊人教堂侧面避开人流</li><li>湖边鲁冰花季节性前景</li><li>傍晚蓝调时间拍教堂剪影</li></ul>
+        <h3>餐厅建议</h3>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&query=Fairlie%20Bakehouse%20New%20Zealand" target="_blank" rel="noreferrer">Fairlie Bakehouse</a>：肉派必停，适合外带</li><li><a href="https://www.google.com/maps/search/?api=1&query=Kohan%20Restaurant%20New%20Zealand" target="_blank" rel="noreferrer">Kohan Restaurant</a>：Tekapo 热门日餐，建议预订</li><li><a href="https://www.google.com/maps/search/?api=1&query=Dark%20Sky%20Diner%20New%20Zealand" target="_blank" rel="noreferrer">Dark Sky Diner</a>：观星前后顺路，景观好</li></ul>
+      </div>
+    </article>
+    <article class="day-card" id="d3">
+      <figure><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80" alt="普卡基三文鱼 · 雪山窗口 · 冰川二选一"><figcaption>Aoraki / Mount Cook · Unsplash</figcaption></figure>
+      <div>
+        <p class="code">D3 · 11月19日｜蒂卡波 → 普卡基湖 → 库克山区域 → 特威泽尔</p>
+        <h2>普卡基三文鱼 · 雪山窗口 · 冰川二选一</h2>
+        <p class="lead">今天的重点是普卡基湖和库克山区域：吃 Mt Cook Alpine Salmon，在游客中心大玻璃窗拍照，再按天气二选一做冰川或徒步。</p>
+        <div class="facts"><span>路线：Tekapo → Lake Pukaki → Aoraki 区域 → Twizel</span><span>住宿：特威泽尔</span><span>节奏：看项目强度调整</span></div>
+        <h3>时间安排</h3>
+        <ol><li><strong>09:00</strong><span>牧羊人教堂晨拍后离开 Tekapo</span></li><li><strong>10:30</strong><span>Lake Pukaki Visitor Centre：三文鱼、大玻璃窗、塔尔羊雕像</span></li><li><strong>12:00</strong><span>Peter’s Lookout 拍普卡基湖和库克山远景</span></li><li><strong>13:30</strong><span>首选塔斯曼冰川直升机徒步；备选胡克谷步道</span></li></ol>
+        <h3>备选方案</h3>
+        <ul><li>直升机取消且天气一般：Tasman Glacier View Track + 库克山游客中心 + 早回 Twizel。</li></ul>
+        <h3>拍照机位</h3>
+        <ul><li>Lake Pukaki Visitor Centre 大玻璃窗长焦人像</li><li>塔尔羊雕像与湖景同框</li><li>Peter’s Lookout 路边雪山湖泊大景</li></ul>
+        <h3>餐厅建议</h3>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&query=Mt%20Cook%20Alpine%20Salmon%20New%20Zealand" target="_blank" rel="noreferrer">Mt Cook Alpine Salmon</a>：普卡基湖三文鱼，适合外带湖边吃</li><li><a href="https://www.google.com/maps/search/?api=1&query=The%20Old%20Mountaineers%20Cafe%20New%20Zealand" target="_blank" rel="noreferrer">The Old Mountaineers Cafe</a>：库克山区域咖啡和简餐</li><li><a href="https://www.google.com/maps/search/?api=1&query=Poppies%20Cafe%20Twizel%20New%20Zealand" target="_blank" rel="noreferrer">Poppies Cafe Twizel</a>：Twizel 晚餐/咖啡候选</li></ul>
+      </div>
+    </article>
+    <article class="day-card" id="d4">
+      <figure><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80" alt="林迪斯山口 · 孤独的树 · 湖边慢游"><figcaption>Wanaka · Unsplash</figcaption></figure>
+      <div>
+        <p class="code">D4 · 11月20日｜特威泽尔 → 瓦纳卡</p>
+        <h2>林迪斯山口 · 孤独的树 · 湖边慢游</h2>
+        <p class="lead">按照你们选择的轻松版执行：不把下午耗在重徒步上，到瓦纳卡后拍孤独的树、大树和湖边，晚上早点休息。</p>
+        <div class="facts"><span>路线：Twizel → Omarama → Lindis Pass → Wanaka</span><span>住宿：瓦纳卡</span><span>节奏：约 2-2.5 小时驾驶</span></div>
+        <h3>时间安排</h3>
+        <ol><li><strong>09:30</strong><span>Twizel 出发，Omarama 短停</span></li><li><strong>11:30</strong><span>Lindis Pass 观景点拍照</span></li><li><strong>14:00</strong><span>抵达 Wanaka，湖边咖啡</span></li><li><strong>16:00</strong><span>That Wanaka Tree、Wanaka Station Park 大树</span></li></ol>
+        <h3>备选方案</h3>
+        <ul><li>如果 D3 因天气没徒步，可加 Diamond Lake / Rocky Mountain 短徒步。</li></ul>
+        <h3>拍照机位</h3>
+        <ul><li>孤独的树用湖面做留白</li><li>Wanaka Station Park 大树低角度</li><li>湖边栈道夕阳剪影</li></ul>
+        <h3>餐厅建议</h3>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&query=Big%20Fig%20Wanaka%20New%20Zealand" target="_blank" rel="noreferrer">Big Fig Wanaka</a>：份量友好，适合自驾晚餐</li><li><a href="https://www.google.com/maps/search/?api=1&query=Kika%20New%20Zealand" target="_blank" rel="noreferrer">Kika</a>：Wanaka 高人气餐厅，适合正式晚餐</li><li><a href="https://www.google.com/maps/search/?api=1&query=Federal%20Diner%20New%20Zealand" target="_blank" rel="noreferrer">Federal Diner</a>：咖啡和早午餐候选</li></ul>
+      </div>
+    </article>
+    <article class="day-card" id="d5">
+      <figure><img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=1200&q=80" alt="卡德罗纳 · 箭镇 · 酒庄备选"><figcaption>Central Otago Road · Unsplash</figcaption></figure>
+      <div>
+        <p class="code">D5 · 11月21日｜瓦纳卡 → 皇后镇</p>
+        <h2>卡德罗纳 · 箭镇 · 酒庄备选</h2>
+        <p class="lead">上午在瓦纳卡收尾，下午不久留，按天气选择皇冠山脉或克伦威尔酒庄线，傍晚抵达皇后镇。</p>
+        <div class="facts"><span>路线：Wanaka → Cardrona / Cromwell → Arrowtown → Queenstown</span><span>住宿：皇后镇</span><span>节奏：半日转场</span></div>
+        <h3>时间安排</h3>
+        <ol><li><strong>09:30</strong><span>Wanaka 湖边咖啡，补拍孤独的树</span></li><li><strong>11:00</strong><span>天气好走 Cardrona Hotel + Crown Range</span></li><li><strong>13:30</strong><span>Arrowtown 小镇、华人定居点和河边散步</span></li><li><strong>17:00</strong><span>抵达 Queenstown 入住，湖边散步</span></li></ol>
+        <h3>备选方案</h3>
+        <ul><li>天气不好走 Cromwell + Gibbston 酒庄区；司机不试酒，只拍照、午餐或买酒。</li></ul>
+        <h3>拍照机位</h3>
+        <ul><li>Cardrona Hotel 门口复古车/建筑</li><li>Arrowtown Buckingham Street 街景</li><li>Crown Range 高处公路感照片</li></ul>
+        <h3>餐厅建议</h3>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&query=The%20Chop%20Shop%20Arrowtown%20New%20Zealand" target="_blank" rel="noreferrer">The Chop Shop Arrowtown</a>：Arrowtown 人气 brunch/午餐</li><li><a href="https://www.google.com/maps/search/?api=1&query=Aosta%20Arrowtown%20New%20Zealand" target="_blank" rel="noreferrer">Aosta Arrowtown</a>：正式晚餐候选</li><li><a href="https://www.google.com/maps/search/?api=1&query=Gibbston%20Valley%20Winery%20New%20Zealand" target="_blank" rel="noreferrer">Gibbston Valley Winery</a>：酒庄午餐和葡萄园拍照</li></ul>
+      </div>
+    </article>
+    <article class="day-card" id="d6">
+      <figure><img src="https://images.unsplash.com/photo-1521673461164-de300ebcfb17?auto=format&fit=crop&w=1200&q=80" alt="跳伞 · Skyline Luge"><figcaption>Queenstown · Unsplash</figcaption></figure>
+      <div>
+        <p class="code">D6 · 11月22日｜皇后镇</p>
+        <h2>跳伞 · Skyline Luge</h2>
+        <p class="lead">把跳伞放在皇后镇第一天，给天气取消留改期空间。下午休息后去 Skyline Gondola + Luge，看瓦卡蒂普湖全景。</p>
+        <div class="facts"><span>路线：Queenstown 市区 + 活动接驳</span><span>住宿：皇后镇</span><span>节奏：高强度项目日</span></div>
+        <h3>时间安排</h3>
+        <ol><li><strong>08:30</strong><span>跳伞集合或酒店接驳</span></li><li><strong>12:30</strong><span>市区午餐和休息</span></li><li><strong>16:00</strong><span>Skyline Gondola + Luge</span></li><li><strong>19:30</strong><span>皇后镇晚餐，轻松收尾</span></li></ol>
+        <h3>备选方案</h3>
+        <ul><li>跳伞取消顺延到 D8；当天改 Queenstown Gardens、湖边和咖啡。</li></ul>
+        <h3>拍照机位</h3>
+        <ul><li>Skyline 观景台俯拍湖湾</li><li>Luge 入口山景合照</li><li>Queenstown Bay 日落湖边</li></ul>
+        <h3>餐厅建议</h3>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&query=Fergburger%20New%20Zealand" target="_blank" rel="noreferrer">Fergburger</a>：经典热门汉堡，适合外带</li><li><a href="https://www.google.com/maps/search/?api=1&query=Botswana%20Butchery%20New%20Zealand" target="_blank" rel="noreferrer">Botswana Butchery</a>：湖边正式餐候选</li><li><a href="https://www.google.com/maps/search/?api=1&query=Flame%20Bar%20%26%20Grill%20New%20Zealand" target="_blank" rel="noreferrer">Flame Bar &amp; Grill</a>：烤肉和肋排候选</li></ul>
+      </div>
+    </article>
+    <article class="day-card" id="d7">
+      <figure><img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?auto=format&fit=crop&w=1200&q=80" alt="Nevis 弹射秋千 · Shotover Jet"><figcaption>Queenstown Adventure · Unsplash</figcaption></figure>
+      <div>
+        <p class="code">D7 · 11月23日｜皇后镇</p>
+        <h2>Nevis 弹射秋千 · Shotover Jet</h2>
+        <p class="lead">上午做 Nevis Catapult + Swing，下午 Shotover Jet。中间保留缓冲，避免接驳和 check-in 时间互相打架。</p>
+        <div class="facts"><span>路线：Queenstown → Nevis → Shotover</span><span>住宿：皇后镇</span><span>节奏：刺激项目日</span></div>
+        <h3>时间安排</h3>
+        <ol><li><strong>08:30</strong><span>Queenstown Bungy Centre 集合</span></li><li><strong>10:00</strong><span>Nevis Catapult + Nevis Swing</span></li><li><strong>14:30</strong><span>返回市区休息补给</span></li><li><strong>16:30</strong><span>Shotover Jet 喷射快艇</span></li></ol>
+        <h3>备选方案</h3>
+        <ul><li>任一项目取消顺延 D8；晚上可安排 Kai KikoKiko 或湖边轻松餐。</li></ul>
+        <h3>拍照机位</h3>
+        <ul><li>Nevis 平台出发前合照</li><li>Shotover Jet 河谷照片点</li><li>Queenstown Mall 夜景街拍</li></ul>
+        <h3>餐厅建议</h3>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&query=Kai%20KikoKiko%20New%20Zealand" target="_blank" rel="noreferrer">Kai KikoKiko</a>：你们指定的 Queenstown 餐厅，适合活动后晚餐</li><li><a href="https://www.google.com/maps/search/?api=1&query=Blue%20Kanu%20New%20Zealand" target="_blank" rel="noreferrer">Blue Kanu</a>：亚洲融合菜，适合多人分享</li><li><a href="https://www.google.com/maps/search/?api=1&query=Tanoshi%20New%20Zealand" target="_blank" rel="noreferrer">Tanoshi</a>：日式小馆，适合轻松晚餐</li></ul>
+      </div>
+    </article>
+    <article class="day-card" id="d8">
+      <figure><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="项目缓冲 · 温泉 · 湖边散步"><figcaption>Relax Day · Unsplash</figcaption></figure>
+      <div>
+        <p class="code">D8 · 11月24日｜皇后镇</p>
+        <h2>项目缓冲 · 温泉 · 湖边散步</h2>
+        <p class="lead">这天不去 Glenorchy，专门作为跳伞、Nevis、Shotover Jet 的天气缓冲。若项目都完成，就安排温泉、花园、咖啡和购物。</p>
+        <div class="facts"><span>路线：Queenstown 机动日</span><span>住宿：皇后镇</span><span>节奏：缓冲休整</span></div>
+        <h3>时间安排</h3>
+        <ol><li><strong>09:30</strong><span>根据前两天项目完成情况决定是否改期</span></li><li><strong>11:00</strong><span>Queenstown Gardens / 湖边慢走</span></li><li><strong>14:00</strong><span>Onsen Hot Pools 或市区购物咖啡</span></li><li><strong>19:00</strong><span>整理行李，准备次日去但尼丁</span></li></ol>
+        <h3>备选方案</h3>
+        <ul><li>如果 D5 没去 Arrowtown，可补 Arrowtown 半日；仍不安排 Glenorchy。</li></ul>
+        <h3>拍照机位</h3>
+        <ul><li>Queenstown Gardens 湖边长椅</li><li>Onsen 私汤窗景</li><li>湖边码头日落</li></ul>
+        <h3>餐厅建议</h3>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&query=Yonder%20New%20Zealand" target="_blank" rel="noreferrer">Yonder</a>：咖啡和早午餐候选</li><li><a href="https://www.google.com/maps/search/?api=1&query=The%20Grille%20by%20Eichardt%E2%80%99s%20New%20Zealand" target="_blank" rel="noreferrer">The Grille by Eichardt’s</a>：湖边景观餐</li><li><a href="https://www.google.com/maps/search/?api=1&query=Rata%20New%20Zealand" target="_blank" rel="noreferrer">Rata</a>：皇后镇正式晚餐候选</li></ul>
+      </div>
+    </article>
+    <article class="day-card" id="d9">
+      <figure><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80" alt="中奥塔哥转场 · 但尼丁火车站"><figcaption>Otago Road · Unsplash</figcaption></figure>
+      <div>
+        <p class="code">D9 · 11月25日｜皇后镇 → 但尼丁</p>
+        <h2>中奥塔哥转场 · 但尼丁火车站</h2>
+        <p class="lead">从皇后镇横切到但尼丁，路上只做短停，下午拍但尼丁火车站，晚上安排 Little India Dunedin。</p>
+        <div class="facts"><span>路线：Queenstown → Cromwell / Alexandra → Dunedin</span><span>住宿：但尼丁</span><span>节奏：约 3.5-4.5 小时驾驶</span></div>
+        <h3>时间安排</h3>
+        <ol><li><strong>08:30</strong><span>皇后镇出发</span></li><li><strong>11:00</strong><span>Cromwell / Alexandra 咖啡短停</span></li><li><strong>15:00</strong><span>抵达但尼丁，火车站和市区散步</span></li><li><strong>18:30</strong><span>Little India Dunedin 晚餐</span></li></ol>
+        <h3>备选方案</h3>
+        <ul><li>如果出发晚，放弃市区散步，只保留火车站外观和晚餐。</li></ul>
+        <h3>拍照机位</h3>
+        <ul><li>但尼丁火车站正面广角</li><li>站内马赛克地砖俯拍</li><li>Octagon 街区建筑感照片</li></ul>
+        <h3>餐厅建议</h3>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&query=Little%20India%20Dunedin%20New%20Zealand" target="_blank" rel="noreferrer">Little India Dunedin</a>：你们指定餐厅，适合晚餐</li><li><a href="https://www.google.com/maps/search/?api=1&query=No.7%20Balmac%20New%20Zealand" target="_blank" rel="noreferrer">No.7 Balmac</a>：当地人气餐厅，需看位置是否顺路</li><li><a href="https://www.google.com/maps/search/?api=1&query=Buster%20Greens%20New%20Zealand" target="_blank" rel="noreferrer">Buster Greens</a>：brunch/轻食候选</li></ul>
+      </div>
+    </article>
+    <article class="day-card" id="d10">
+      <figure><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="海狮海狗 · 大圆石 · 小蓝企鹅归巢"><figcaption>Otago Coast · Unsplash</figcaption></figure>
+      <div>
+        <p class="code">D10 · 11月26日｜但尼丁 → 奥马鲁</p>
+        <h2>海狮海狗 · 大圆石 · 小蓝企鹅归巢</h2>
+        <p class="lead">今天是动物线：上午奥塔哥半岛/Sandfly Bay，中午北上摩拉基大圆石和卡蒂基角，晚上准时到奥马鲁看小蓝企鹅归巢。</p>
+        <div class="facts"><span>路线：Dunedin → Otago Peninsula → Moeraki → Kātiki Point → Oamaru</span><span>住宿：奥马鲁</span><span>节奏：景点多，需控时</span></div>
+        <h3>时间安排</h3>
+        <ol><li><strong>08:30</strong><span>但尼丁出发，奥塔哥半岛 / Sandfly Bay</span></li><li><strong>12:30</strong><span>北上 Moeraki Boulders</span></li><li><strong>15:00</strong><span>Kātiki Point 看海狗、碰碰黄眼企鹅机会</span></li><li><strong>傍晚</strong><span>抵达 Oamaru，晚餐后看小蓝企鹅归巢</span></li></ol>
+        <h3>备选方案</h3>
+        <ul><li>如果 D10 时间紧，优先保留 Kātiki Point 和 Oamaru Penguins，Moeraki 拍照压缩到 30-40 分钟。</li></ul>
+        <h3>拍照机位</h3>
+        <ul><li>Moeraki Boulders 低机位大圆石</li><li>Kātiki Point 灯塔步道远景</li><li>Oamaru 企鹅中心外海岸日落</li></ul>
+        <h3>餐厅建议</h3>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&query=Fleur%E2%80%99s%20Place%20Moeraki%20New%20Zealand" target="_blank" rel="noreferrer">Fleur’s Place Moeraki</a>：海鲜名店，需确认营业和预订</li><li><a href="https://www.google.com/maps/search/?api=1&query=Cucina%20Oamaru%20New%20Zealand" target="_blank" rel="noreferrer">Cucina Oamaru</a>：Oamaru 晚餐候选</li><li><a href="https://www.google.com/maps/search/?api=1&query=Scotts%20Brewing%20Co.%20New%20Zealand" target="_blank" rel="noreferrer">Scotts Brewing Co.</a>：企鹅前轻松晚餐候选</li></ul>
+      </div>
+    </article>
+    <article class="day-card" id="d11">
+      <figure><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="白石老街 · Caroline Bay · 回到基督城"><figcaption>Road Trip Close · Unsplash</figcaption></figure>
+      <div>
+        <p class="code">D11 · 11月27日｜奥马鲁 → 基督城</p>
+        <h2>白石老街 · Caroline Bay · 回到基督城</h2>
+        <p class="lead">上午补逛奥马鲁白石老街，午后经 Timaru / Caroline Bay 回基督城。晚上提前住基督城，避免 11月28 当天赶路。</p>
+        <div class="facts"><span>路线：Oamaru → Timaru → Christchurch</span><span>住宿：基督城</span><span>节奏：约 3-3.5 小时驾驶</span></div>
+        <h3>时间安排</h3>
+        <ol><li><strong>09:30</strong><span>Oamaru Victorian Precinct 白石老街和咖啡</span></li><li><strong>12:00</strong><span>出发北上</span></li><li><strong>14:00</strong><span>Timaru / Caroline Bay 短休</span></li><li><strong>17:30</strong><span>抵达基督城，整理行李</span></li></ol>
+        <h3>备选方案</h3>
+        <ul><li>如果 11月28 航班很早，今天更要提前回基督城，不增加远景点。</li></ul>
+        <h3>拍照机位</h3>
+        <ul><li>Victorian Precinct 白石建筑街景</li><li>Harbour Street 复古门头</li><li>Caroline Bay 海边长椅</li></ul>
+        <h3>餐厅建议</h3>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&query=The%20Roost%20Oamaru%20New%20Zealand" target="_blank" rel="noreferrer">The Roost Oamaru</a>：早午餐候选</li><li><a href="https://www.google.com/maps/search/?api=1&query=Street%20Food%20Kitchen%20Timaru%20New%20Zealand" target="_blank" rel="noreferrer">Street Food Kitchen Timaru</a>：中途午餐候选</li><li><a href="https://www.google.com/maps/search/?api=1&query=Riverside%20Market%20Christchurch%20New%20Zealand" target="_blank" rel="noreferrer">Riverside Market Christchurch</a>：回城后轻松晚餐</li></ul>
+      </div>
+    </article>
+    <article class="day-card" id="d12">
+      <figure><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80" alt="还车值机 · 返程回上海"><figcaption>Departure Day · Unsplash</figcaption></figure>
+      <div>
+        <p class="code">D12 · 11月28日｜基督城 → 上海</p>
+        <h2>还车值机 · 返程回上海</h2>
+        <p class="lead">这天不安排长途驾驶，只做还车、值机和返程。如果航班较晚，可在市区喝咖啡或买伴手礼。</p>
+        <div class="facts"><span>路线：Christchurch → Airport → Shanghai</span><span>住宿：返程</span><span>节奏：机场缓冲</span></div>
+        <h3>时间安排</h3>
+        <ol><li><strong>上午</strong><span>酒店退房，检查行李和租车物品</span></li><li><strong>中午</strong><span>视航班时间还车、值机</span></li><li><strong>下午/晚上</strong><span>基督城飞上海，通常需要中转</span></li><li><strong>备选</strong><span>航班晚则安排市区咖啡或南极中心半日</span></li></ol>
+        <h3>备选方案</h3>
+        <ul><li>如果航班很晚，可去 International Antarctic Centre；如果行李多，优先机场附近轻松等候。</li></ul>
+        <h3>拍照机位</h3>
+        <ul><li>基督城市区最后咖啡照</li><li>机场出发前合照</li><li>南极中心入口打卡</li></ul>
+        <h3>餐厅建议</h3>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&query=Unknown%20Chapter%20Coffee%20New%20Zealand" target="_blank" rel="noreferrer">Unknown Chapter Coffee</a>：市区咖啡候选</li><li><a href="https://www.google.com/maps/search/?api=1&query=C1%20Espresso%20New%20Zealand" target="_blank" rel="noreferrer">C1 Espresso</a>：基督城经典咖啡馆候选</li><li><a href="https://www.google.com/maps/search/?api=1&query=Riverside%20Market%20New%20Zealand" target="_blank" rel="noreferrer">Riverside Market</a>：返程前补餐和伴手礼</li></ul>
+      </div>
+    </article></section></div></section>
+  </main>
+  <script>
+    const days = [{"code":"S1","segment":"sydney","date":"11月14日｜悉尼会合","title":"落地购物 · 歌剧院芭蕾夜","keyword":"南半球会合夜","route":"悉尼机场 → CBD → 歌剧院","stay":"悉尼 CBD / Circular Quay 周边","distance":"市区短途","pace":"落地缓冲","image":"https://images.unsplash.com/photo-1523428096881-5bd79d043006?auto=format&fit=crop&w=1200&q=80","imageCredit":"Sydney Harbour · Unsplash","lead":"Jessie 14:00 抵达悉尼，下午只安排轻购物和休息，晚上暂定悉尼歌剧院芭蕾，不把第一天压得太满。","weather":"11月悉尼通常温和偏暖，约 17-24°C；下午到海边或港口仍可能有风，带一件薄外套。","schedule":[["14:00","Jessie 抵达悉尼，完成入境、取行李和会合"],["16:30","QVB / Pitt Street Mall / Westfield Sydney 轻购物"],["18:00","CBD 简单晚餐，尽量别离歌剧院太远"],["19:30","暂定悉尼歌剧院芭蕾《Copland Dance Episodes》"]],"alternatives":["如果落地疲惫，取消演出，只保留 Circular Quay 夜景和早休息。"],"photoSpots":["歌剧院台阶仰拍","Circular Quay 远景合照","海港大桥夜景人像"],"restaurants":[["Bennelong","歌剧院内正式餐，适合仪式感晚餐"],["Chat Thai Circular Quay","港口附近热门泰餐，适合演出前后"],["Din Tai Fung World Square","CBD 稳定选择，适合刚落地不想冒险"]],"bookings":["悉尼歌剧院芭蕾票待确认","悉尼酒店待确认"],"stops":["Sydney Airport","Queen Victoria Building","Sydney Opera House","Circular Quay"],"center":[-33.8568,151.2153]},{"code":"S2","segment":"sydney","date":"11月15日｜悉尼市区","title":"海德公园 · 植物园 · 海港经典线","keyword":"悉尼封面照一日","route":"Hyde Park → St Mary’s → Art Gallery → Royal Botanic Garden → Circular Quay","stay":"悉尼","distance":"步行 + 市区短途","pace":"全天 City Walk","image":"https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1200&q=80","imageCredit":"Sydney Opera House · Unsplash","lead":"把悉尼最经典的市区景点集中在一天完成，动线顺、拍照点密集，晚上留给轻松晚餐和港口夜景。","weather":"11月白天日照强，建议防晒、墨镜和水；如果下雨，优先保留美术馆和 QVB。","schedule":[["09:30","海德公园和圣玛丽大教堂"],["11:00","新南威尔士美术馆短逛"],["13:30","皇家植物园散步到 Mrs Macquarie’s Chair"],["16:30","Circular Quay、歌剧院和海港大桥拍照"]],"alternatives":["雨天把植物园压缩，增加 QVB、The Strand Arcade 或美术馆时间。"],"photoSpots":["Mrs Macquarie’s Chair 拍歌剧院+海港大桥同框","圣玛丽大教堂正面广角","皇家植物园草坪港口背景"],"restaurants":[["The Grounds of the City","CBD 复古风 brunch，适合拍照"],["Opera Bar","歌剧院旁海港景观，适合傍晚"],["Mr. Wong","CBD 热门中餐，适合正式晚餐"]],"bookings":["如需热门餐厅晚餐，提前订位"],"stops":["Hyde Park Sydney","St Mary’s Cathedral Sydney","Art Gallery of NSW","Mrs Macquarie’s Chair","Sydney Opera House"],"center":[-33.8642,151.2166]},{"code":"S3","segment":"sydney","date":"11月16日｜悉尼 → 基督城","title":"Bondi 海岸线 · 晚飞基督城","keyword":"海边半日逃跑计划","route":"Bondi / Taronga Zoo → Sydney Airport → Christchurch","stay":"基督城","distance":"市区短途 + 国际航班","pace":"半日游 + 转场","image":"https://images.unsplash.com/photo-1533827432537-70133748f5c8?auto=format&fit=crop&w=1200&q=80","imageCredit":"Bondi Coast · Unsplash","lead":"白天按天气二选一，晚上三人一起从悉尼飞基督城，保证 11月17日新西兰 D1 能从容开始。","weather":"海岸线风大且紫外线强；如果降雨或体力一般，动物园比海边徒步更稳。","schedule":[["09:30","天气好走 Bondi Beach → Tamarama → Bronte 短徒步"],["12:30","海边午餐或咖啡"],["15:30","回酒店取行李，前往悉尼机场"],["晚上","悉尼飞基督城，抵达后入住休息"]],"alternatives":["天气一般改 Taronga Zoo 半日；如果晚航班很早，海边只去 Bondi 拍照不徒步。"],"photoSpots":["Bondi Icebergs 俯拍泳池和海","Tamarama 观景台","Bronte 海边岩石和草坪"],"restaurants":[["Bills Bondi","海边 brunch 候选"],["Icebergs Dining Room","Bondi 景观餐厅，预算较高"],["Lox Stock & Barrel","Bondi 轻食咖啡"]],"bookings":["悉尼 → 基督城航班待确认","基督城酒店待确认"],"stops":["Bondi Beach","Tamarama Beach","Bronte Beach","Taronga Zoo Sydney","Sydney Airport","Christchurch Airport"],"center":[-33.8915,151.2767]},{"code":"D1","segment":"nz","date":"11月17日｜基督城","title":"纸板教堂 · 复古电车 · 雅芳河","keyword":"基督城温柔开场","route":"基督城市区轻松适应","stay":"基督城","distance":"市区短途","pace":"取车补给","image":"https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?auto=format&fit=crop&w=1200&q=80","imageCredit":"Christchurch · Unsplash","lead":"正式开始新西兰段。今天不跨城赶路，重点是取车、熟悉右舵、逛纸板教堂和雅芳河，把自驾状态调整好。","weather":"11月基督城春末初夏，常见 9-20°C，早晚冷、午后舒服；市区日带薄外套即可。","schedule":[["09:30","取车、检查车况、熟悉右舵驾驶"],["11:00","纸板教堂和新摄政街"],["14:00","复古电车、雅芳河、植物园"],["17:30","超市补给，准备后续自驾早餐和路餐"]],"alternatives":["如果前一晚航班延误，压缩市区，只保留纸板教堂、超市和早休息。"],"photoSpots":["纸板教堂正面几何线条","New Regent Street 彩色立面","雅芳河桥边人像"],"restaurants":[["Riverside Market","选择多，适合多人各吃各的"],["Twenty Seven Steps","市中心评价稳定，适合晚餐"],["Little High Eatery","轻松美食广场，适合第一天"]],"bookings":["租车订单待确认","基督城酒店待确认"],"stops":["Christchurch Airport","Cardboard Cathedral","New Regent Street","Christchurch Tram","Avon River Christchurch","Christchurch Botanic Gardens"],"center":[-43.5321,172.6362]},{"code":"D2","segment":"nz","date":"11月18日｜基督城 → 蒂卡波湖","title":"肉派小镇 · 牧羊人教堂 · 观星","keyword":"蓝湖星空初体验","route":"基督城 → Fairlie → Lake Tekapo","stay":"蒂卡波湖","distance":"约 230 km","pace":"约 3-3.5 小时驾驶","image":"https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80","imageCredit":"Lake Tekapo · Unsplash","lead":"从基督城进入中线湖区，中途吃 Fairlie Bakehouse 肉派，下午留给牧羊人教堂和湖边步道，晚上看天气安排观星。","weather":"Tekapo 11月早晚偏冷、风感明显，观星需要羽绒/冲锋衣；云量决定体验质量。","schedule":[["08:30","基督城出发"],["11:00","Fairlie Bakehouse 肉派早餐/早午餐"],["13:00","抵达蒂卡波湖，湖边步道和牧羊人教堂"],["20:30","Tekapo 观星，按当天云量确认"]],"alternatives":["云多或下雨改 Tekapo Springs；牧羊人教堂可放 D3 清晨补拍。"],"photoSpots":["牧羊人教堂侧面避开人流","湖边鲁冰花季节性前景","傍晚蓝调时间拍教堂剪影"],"restaurants":[["Fairlie Bakehouse","肉派必停，适合外带"],["Kohan Restaurant","Tekapo 热门日餐，建议预订"],["Dark Sky Diner","观星前后顺路，景观好"]],"bookings":["Tekapo 观星待确认","Tekapo 住宿待确认"],"stops":["Fairlie Bakehouse","Lake Tekapo","Church of the Good Shepherd","Tekapo Stargazing"],"center":[-44.0047,170.4771]},{"code":"D3","segment":"nz","date":"11月19日｜蒂卡波 → 普卡基湖 → 库克山区域 → 特威泽尔","title":"普卡基三文鱼 · 雪山窗口 · 冰川二选一","keyword":"库克山封神日","route":"Tekapo → Lake Pukaki → Aoraki 区域 → Twizel","stay":"特威泽尔","distance":"约 120-190 km","pace":"看项目强度调整","image":"https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80","imageCredit":"Aoraki / Mount Cook · Unsplash","lead":"今天的重点是普卡基湖和库克山区域：吃 Mt Cook Alpine Salmon，在游客中心大玻璃窗拍照，再按天气二选一做冰川或徒步。","weather":"库克山区域天气变化快，风雨会影响直升机和徒步；早上确认运营状态后再定最终路线。","schedule":[["09:00","牧羊人教堂晨拍后离开 Tekapo"],["10:30","Lake Pukaki Visitor Centre：三文鱼、大玻璃窗、塔尔羊雕像"],["12:00","Peter’s Lookout 拍普卡基湖和库克山远景"],["13:30","首选塔斯曼冰川直升机徒步；备选胡克谷步道"]],"alternatives":["直升机取消且天气一般：Tasman Glacier View Track + 库克山游客中心 + 早回 Twizel。"],"photoSpots":["Lake Pukaki Visitor Centre 大玻璃窗长焦人像","塔尔羊雕像与湖景同框","Peter’s Lookout 路边雪山湖泊大景"],"restaurants":[["Mt Cook Alpine Salmon","普卡基湖三文鱼，适合外带湖边吃"],["The Old Mountaineers Cafe","库克山区域咖啡和简餐"],["Poppies Cafe Twizel","Twizel 晚餐/咖啡候选"]],"bookings":["塔斯曼冰川直升机徒步待确认","Twizel 住宿待确认"],"stops":["Church of the Good Shepherd","Lake Pukaki Visitor Centre","Mt Cook Alpine Salmon","Peter's Lookout","Hooker Valley Track","Tasman Glacier","Twizel"],"center":[-44.2576,170.099]},{"code":"D4","segment":"nz","date":"11月20日｜特威泽尔 → 瓦纳卡","title":"林迪斯山口 · 孤独的树 · 湖边慢游","keyword":"瓦纳卡松弛日","route":"Twizel → Omarama → Lindis Pass → Wanaka","stay":"瓦纳卡","distance":"约 145 km","pace":"约 2-2.5 小时驾驶","image":"https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80","imageCredit":"Wanaka · Unsplash","lead":"按照你们选择的轻松版执行：不把下午耗在重徒步上，到瓦纳卡后拍孤独的树、大树和湖边，晚上早点休息。","weather":"Lindis Pass 风大、日照强；Wanaka 早晚温差明显，湖边拍照带外套。","schedule":[["09:30","Twizel 出发，Omarama 短停"],["11:30","Lindis Pass 观景点拍照"],["14:00","抵达 Wanaka，湖边咖啡"],["16:00","That Wanaka Tree、Wanaka Station Park 大树"]],"alternatives":["如果 D3 因天气没徒步，可加 Diamond Lake / Rocky Mountain 短徒步。"],"photoSpots":["孤独的树用湖面做留白","Wanaka Station Park 大树低角度","湖边栈道夕阳剪影"],"restaurants":[["Big Fig Wanaka","份量友好，适合自驾晚餐"],["Kika","Wanaka 高人气餐厅，适合正式晚餐"],["Federal Diner","咖啡和早午餐候选"]],"bookings":["Wanaka 住宿待确认"],"stops":["Twizel","Omarama","Lindis Pass","That Wanaka Tree","Wanaka Station Park","Wanaka"],"center":[-44.6947,169.1417]},{"code":"D5","segment":"nz","date":"11月21日｜瓦纳卡 → 皇后镇","title":"卡德罗纳 · 箭镇 · 酒庄备选","keyword":"山路小镇电影感","route":"Wanaka → Cardrona / Cromwell → Arrowtown → Queenstown","stay":"皇后镇","distance":"约 75-115 km","pace":"半日转场","image":"https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=1200&q=80","imageCredit":"Central Otago Road · Unsplash","lead":"上午在瓦纳卡收尾，下午不久留，按天气选择皇冠山脉或克伦威尔酒庄线，傍晚抵达皇后镇。","weather":"皇冠山脉山路受风雨影响更明显；天气不好走 Cromwell/Gibbston 更稳。","schedule":[["09:30","Wanaka 湖边咖啡，补拍孤独的树"],["11:00","天气好走 Cardrona Hotel + Crown Range"],["13:30","Arrowtown 小镇、华人定居点和河边散步"],["17:00","抵达 Queenstown 入住，湖边散步"]],"alternatives":["天气不好走 Cromwell + Gibbston 酒庄区；司机不试酒，只拍照、午餐或买酒。"],"photoSpots":["Cardrona Hotel 门口复古车/建筑","Arrowtown Buckingham Street 街景","Crown Range 高处公路感照片"],"restaurants":[["The Chop Shop Arrowtown","Arrowtown 人气 brunch/午餐"],["Aosta Arrowtown","正式晚餐候选"],["Gibbston Valley Winery","酒庄午餐和葡萄园拍照"]],"bookings":["Queenstown 住宿待确认"],"stops":["Wanaka","Cardrona Hotel","Crown Range Road Scenic Lookout","Arrowtown","Gibbston Valley Winery","Queenstown"],"center":[-44.9382,168.8356]},{"code":"D6","segment":"nz","date":"11月22日｜皇后镇","title":"跳伞 · Skyline Luge","keyword":"皇后镇尖叫第一弹","route":"Queenstown 市区 + 活动接驳","stay":"皇后镇","distance":"短途接驳","pace":"高强度项目日","image":"https://images.unsplash.com/photo-1521673461164-de300ebcfb17?auto=format&fit=crop&w=1200&q=80","imageCredit":"Queenstown · Unsplash","lead":"把跳伞放在皇后镇第一天，给天气取消留改期空间。下午休息后去 Skyline Gondola + Luge，看瓦卡蒂普湖全景。","weather":"跳伞高度依赖云量和风速，早上先等运营确认；傍晚山顶温度低，带外套。","schedule":[["08:30","跳伞集合或酒店接驳"],["12:30","市区午餐和休息"],["16:00","Skyline Gondola + Luge"],["19:30","皇后镇晚餐，轻松收尾"]],"alternatives":["跳伞取消顺延到 D8；当天改 Queenstown Gardens、湖边和咖啡。"],"photoSpots":["Skyline 观景台俯拍湖湾","Luge 入口山景合照","Queenstown Bay 日落湖边"],"restaurants":[["Fergburger","经典热门汉堡，适合外带"],["Botswana Butchery","湖边正式餐候选"],["Flame Bar & Grill","烤肉和肋排候选"]],"bookings":["跳伞待确认","Skyline Gondola + Luge 待确认"],"stops":["Queenstown Airport","Skyline Queenstown","Queenstown Bay"],"center":[-45.0312,168.6626]},{"code":"D7","segment":"nz","date":"11月23日｜皇后镇","title":"Nevis 弹射秋千 · Shotover Jet","keyword":"皇后镇尖叫第二弹","route":"Queenstown → Nevis → Shotover","stay":"皇后镇","distance":"官方接驳 + 市区短途","pace":"刺激项目日","image":"https://images.unsplash.com/photo-1519904981063-b0cf448d479e?auto=format&fit=crop&w=1200&q=80","imageCredit":"Queenstown Adventure · Unsplash","lead":"上午做 Nevis Catapult + Swing，下午 Shotover Jet。中间保留缓冲，避免接驳和 check-in 时间互相打架。","weather":"Nevis 和快艇都受强风、河流水位影响；如果项目延误，不要强塞远景点。","schedule":[["08:30","Queenstown Bungy Centre 集合"],["10:00","Nevis Catapult + Nevis Swing"],["14:30","返回市区休息补给"],["16:30","Shotover Jet 喷射快艇"]],"alternatives":["任一项目取消顺延 D8；晚上可安排 Kai KikoKiko 或湖边轻松餐。"],"photoSpots":["Nevis 平台出发前合照","Shotover Jet 河谷照片点","Queenstown Mall 夜景街拍"],"restaurants":[["Kai KikoKiko","你们指定的 Queenstown 餐厅，适合活动后晚餐"],["Blue Kanu","亚洲融合菜，适合多人分享"],["Tanoshi","日式小馆，适合轻松晚餐"]],"bookings":["Nevis Combo 待确认","Shotover Jet 待确认","Kai KikoKiko 订位待确认"],"stops":["Queenstown Bungy Centre","Nevis Playground","Shotover Jet","Kai KikoKiko"],"center":[-45.0312,168.6626]},{"code":"D8","segment":"nz","date":"11月24日｜皇后镇","title":"项目缓冲 · 温泉 · 湖边散步","keyword":"皇后镇回血日","route":"Queenstown 机动日","stay":"皇后镇","distance":"按当天选择","pace":"缓冲休整","image":"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80","imageCredit":"Relax Day · Unsplash","lead":"这天不去 Glenorchy，专门作为跳伞、Nevis、Shotover Jet 的天气缓冲。若项目都完成，就安排温泉、花园、咖啡和购物。","weather":"皇后镇春末天气多变，缓冲日的价值很高；如果晴朗，可补拍湖边和山景。","schedule":[["09:30","根据前两天项目完成情况决定是否改期"],["11:00","Queenstown Gardens / 湖边慢走"],["14:00","Onsen Hot Pools 或市区购物咖啡"],["19:00","整理行李，准备次日去但尼丁"]],"alternatives":["如果 D5 没去 Arrowtown，可补 Arrowtown 半日；仍不安排 Glenorchy。"],"photoSpots":["Queenstown Gardens 湖边长椅","Onsen 私汤窗景","湖边码头日落"],"restaurants":[["Yonder","咖啡和早午餐候选"],["The Grille by Eichardt’s","湖边景观餐"],["Rata","皇后镇正式晚餐候选"]],"bookings":["Onsen Hot Pools 备选待确认"],"stops":["Queenstown Gardens","Onsen Hot Pools","Queenstown Mall","Arrowtown"],"center":[-45.0312,168.6626]},{"code":"D9","segment":"nz","date":"11月25日｜皇后镇 → 但尼丁","title":"中奥塔哥转场 · 但尼丁火车站","keyword":"从山湖开到海风","route":"Queenstown → Cromwell / Alexandra → Dunedin","stay":"但尼丁","distance":"约 280 km","pace":"约 3.5-4.5 小时驾驶","image":"https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80","imageCredit":"Otago Road · Unsplash","lead":"从皇后镇横切到但尼丁，路上只做短停，下午拍但尼丁火车站，晚上安排 Little India Dunedin。","weather":"东海岸城市风大，温度比皇后镇更湿冷；下午拍建筑时注意海风和小雨。","schedule":[["08:30","皇后镇出发"],["11:00","Cromwell / Alexandra 咖啡短停"],["15:00","抵达但尼丁，火车站和市区散步"],["18:30","Little India Dunedin 晚餐"]],"alternatives":["如果出发晚，放弃市区散步，只保留火车站外观和晚餐。"],"photoSpots":["但尼丁火车站正面广角","站内马赛克地砖俯拍","Octagon 街区建筑感照片"],"restaurants":[["Little India Dunedin","你们指定餐厅，适合晚餐"],["No.7 Balmac","当地人气餐厅，需看位置是否顺路"],["Buster Greens","brunch/轻食候选"]],"bookings":["但尼丁住宿待确认","Little India 订位待确认"],"stops":["Queenstown","Cromwell","Alexandra","Dunedin Railway Station","Little India Dunedin"],"center":[-45.8788,170.5028]},{"code":"D10","segment":"nz","date":"11月26日｜但尼丁 → 奥马鲁","title":"海狮海狗 · 大圆石 · 小蓝企鹅归巢","keyword":"东海岸动物运气日","route":"Dunedin → Otago Peninsula → Moeraki → Kātiki Point → Oamaru","stay":"奥马鲁","distance":"约 170-220 km","pace":"景点多，需控时","image":"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80","imageCredit":"Otago Coast · Unsplash","lead":"今天是动物线：上午奥塔哥半岛/Sandfly Bay，中午北上摩拉基大圆石和卡蒂基角，晚上准时到奥马鲁看小蓝企鹅归巢。","weather":"海岸风冷且可能下雨，穿防风外套；野生动物观测不保证，重点是保持距离。","schedule":[["08:30","但尼丁出发，奥塔哥半岛 / Sandfly Bay"],["12:30","北上 Moeraki Boulders"],["15:00","Kātiki Point 看海狗、碰碰黄眼企鹅机会"],["傍晚","抵达 Oamaru，晚餐后看小蓝企鹅归巢"]],"alternatives":["如果 D10 时间紧，优先保留 Kātiki Point 和 Oamaru Penguins，Moeraki 拍照压缩到 30-40 分钟。"],"photoSpots":["Moeraki Boulders 低机位大圆石","Kātiki Point 灯塔步道远景","Oamaru 企鹅中心外海岸日落"],"restaurants":[["Fleur’s Place Moeraki","海鲜名店，需确认营业和预订"],["Cucina Oamaru","Oamaru 晚餐候选"],["Scotts Brewing Co.","企鹅前轻松晚餐候选"]],"bookings":["Oamaru Blue Penguin Colony 待确认","Oamaru 住宿待确认"],"stops":["Sandfly Bay","Moeraki Boulders","Kātiki Point Lighthouse","Oamaru Blue Penguin Colony","Oamaru"],"center":[-45.1016,170.9701]},{"code":"D11","segment":"nz","date":"11月27日｜奥马鲁 → 基督城","title":"白石老街 · Caroline Bay · 回到基督城","keyword":"企鹅夜后的收尾路","route":"Oamaru → Timaru → Christchurch","stay":"基督城","distance":"约 250 km","pace":"约 3-3.5 小时驾驶","image":"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80","imageCredit":"Road Trip Close · Unsplash","lead":"上午补逛奥马鲁白石老街，午后经 Timaru / Caroline Bay 回基督城。晚上提前住基督城，避免 11月28 当天赶路。","weather":"这天以返程稳定为主；如果下雨，减少停留，优先早到基督城整理行李。","schedule":[["09:30","Oamaru Victorian Precinct 白石老街和咖啡"],["12:00","出发北上"],["14:00","Timaru / Caroline Bay 短休"],["17:30","抵达基督城，整理行李"]],"alternatives":["如果 11月28 航班很早，今天更要提前回基督城，不增加远景点。"],"photoSpots":["Victorian Precinct 白石建筑街景","Harbour Street 复古门头","Caroline Bay 海边长椅"],"restaurants":[["The Roost Oamaru","早午餐候选"],["Street Food Kitchen Timaru","中途午餐候选"],["Riverside Market Christchurch","回城后轻松晚餐"]],"bookings":["基督城最后一晚酒店待确认"],"stops":["Oamaru Victorian Precinct","Timaru","Caroline Bay","Christchurch"],"center":[-44.3969,171.2549]},{"code":"D12","segment":"nz","date":"11月28日｜基督城 → 上海","title":"还车值机 · 返程回上海","keyword":"不冒险的返程日","route":"Christchurch → Airport → Shanghai","stay":"返程","distance":"市区短途","pace":"机场缓冲","image":"https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80","imageCredit":"Departure Day · Unsplash","lead":"这天不安排长途驾驶，只做还车、值机和返程。如果航班较晚，可在市区喝咖啡或买伴手礼。","weather":"返程日天气只影响市区小逛；无论晴雨，都不再安排远距离景点。","schedule":[["上午","酒店退房，检查行李和租车物品"],["中午","视航班时间还车、值机"],["下午/晚上","基督城飞上海，通常需要中转"],["备选","航班晚则安排市区咖啡或南极中心半日"]],"alternatives":["如果航班很晚，可去 International Antarctic Centre；如果行李多，优先机场附近轻松等候。"],"photoSpots":["基督城市区最后咖啡照","机场出发前合照","南极中心入口打卡"],"restaurants":[["Unknown Chapter Coffee","市区咖啡候选"],["C1 Espresso","基督城经典咖啡馆候选"],["Riverside Market","返程前补餐和伴手礼"]],"bookings":["基督城返程航班待确认","还车时间待确认"],"stops":["Christchurch","International Antarctic Centre","Christchurch Airport"],"center":[-43.4894,172.5322]}];
+    const legLabelsByDay = {"S1":["🚗 20-35min","🚗 8-15min","🚶 5-8min"],"S2":["🚶 5min","🚶 10-12min","🚗 5-10min","🚗 6-10min"],"S3":["🚗 5-8min","🚶 15min","🚗 35-50min","🚗 30-45min"],"D1":["🚗 20-30min","🚶 8-12min","🚶 8-12min","🚶 10-15min","🚗 5-10min"],"D2":["🚗 3-3.5h","🚗 40-50min","🚶 5-10min","🚗 5-10min"],"D3":["🚶 3-5min","🚗 35-45min","🚗 10-15min","🚗 12-18min","🚗 20-25min","🚗 45-60min"],"D4":["🚗 30-40min","🚗 45-60min","🚗 50-70min","🚗 5-8min","🚗 5-10min"],"D5":["🚗 20-30min","🚗 20-30min","🚗 20-30min","🚗 25-35min","🚗 25-35min"],"D6":["🚗 10-20min","🚗 10-15min"],"D7":["🚗 5-10min","🚗 35-45min","🚗 10-15min"],"D8":["🚗 10-15min","🚗 10-15min","🚗 10-15min"],"D9":["🚗 55-70min","🚗 60-75min","🚗 2-2.5h","🚗 5-10min"],"D10":["🚗 1.5-2h","🚗 15-20min","🚗 30-40min","🚗 5-10min"],"D11":["🚗 1.5h","🚶 5-10min","🚗 2h"],"D12":["🚗 15-20min","🚗 5-10min"]};
+    const state = {};
+    function mapLink(query, segment = "nz") {
+      const suffix = segment === "sydney" ? " Sydney Australia" : " New Zealand";
+      return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(query + suffix);
+    }
+    function renderSection(section, code) {
+      const segment = section.dataset.segment;
+      const sectionDays = days.filter((day) => day.segment === segment);
+      const day = sectionDays.find((item) => item.code === code) || sectionDays[0];
+      state[segment] = day.code;
+      section.querySelectorAll(".day-nav button").forEach((button) => button.classList.toggle("active", button.dataset.day === day.code));
+      section.querySelector(".intro").innerHTML = '<p class="date">' + day.date + '</p><h1>' + day.keyword + '</h1><p>' + day.lead + '</p>';
+      section.querySelector(".day-info").innerHTML = '<h2>' + day.title + '</h2><div class="metrics"><div class="metric"><span>路线</span><strong>' + day.route + '</strong></div><div class="metric"><span>节奏</span><strong>' + day.pace + '</strong></div><div class="metric"><span>住宿</span><strong>' + day.stay + '</strong></div></div><p class="lead"><strong>天气参考：</strong>' + day.weather + '</p><div class="stop-list">' + day.stops.slice(0, 6).map((stop, index) => '<div class="stop"><b>' + (index + 1) + '</b><strong>' + stop + '</strong><a target="_blank" rel="noreferrer" href="' + mapLink(stop, day.segment) + '">Google</a></div>').join("") + '</div><div class="leg-list">' + (legLabelsByDay[day.code] || []).map((label, index) => '<div class="leg"><span class="' + (label.startsWith("🚶") ? "walk" : "drive") + '">' + label + '</span><strong>' + (day.stops[index] || "") + ' → ' + (day.stops[index + 1] || "") + '</strong></div>').join("") + '</div>';
+      const svg = section.querySelector("svg");
+      const points = day.stops.slice(0, 6).map((stop, index, arr) => {
+        const t = arr.length === 1 ? .5 : index / (arr.length - 1);
+        const x = 70 + t * 500;
+        const y = 90 + Math.sin(t * Math.PI * 1.6) * 70 + index % 2 * 70;
+        return { stop, x, y, index };
+      });
+      const d = points.map((p, i) => (i ? "L" : "M") + p.x + " " + p.y).join(" ");
+      svg.innerHTML = '<path class="route-line" d="' + d + '"/>' + points.map((p) => '<circle class="map-dot active" cx="' + p.x + '" cy="' + p.y + '" r="17"/><text class="map-label" x="' + (p.x + 22) + '" y="' + (p.y + 5) + '">' + day.code + ' · ' + p.stop + '</text>').join("") + (legLabelsByDay[day.code] || []).slice(0, points.length - 1).map((label, i) => '<text class="map-leg" x="' + ((points[i].x + points[i+1].x) / 2 - 28) + '" y="' + ((points[i].y + points[i+1].y) / 2 - 10) + '">' + label + '</text>').join("");
+    }
+    document.querySelectorAll(".route-section").forEach((section) => {
+      section.querySelectorAll(".day-nav button").forEach((button) => button.addEventListener("click", () => renderSection(section, button.dataset.day)));
+      renderSection(section, section.querySelector(".day-nav button").dataset.day);
+    });
+    document.querySelectorAll(".switch button").forEach((button) => button.addEventListener("click", () => {
+      document.querySelectorAll(".switch button").forEach((item) => item.classList.toggle("active", item === button));
+      document.querySelector("#mapView").classList.toggle("active", button.dataset.view === "map");
+      document.querySelector("#textView").classList.toggle("active", button.dataset.view === "text");
+    }));
+    function unlock(){document.querySelector("#gate").style.display="none";document.querySelector("#app").style.display="block";}
+    if(localStorage.getItem("nz-trip-passcode-ok")==="true") unlock();
+    document.querySelector("#gateForm").addEventListener("submit",(event)=>{event.preventDefault();if(document.querySelector("#passcode").value==="0000"){localStorage.setItem("nz-trip-passcode-ok","true");unlock();}else{document.querySelector("#error").style.display="block";}});
+  </script>
+</body>
+</html>
