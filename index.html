@@ -20,7 +20,7 @@
   <main class="gate" id="gate"><section class="gate-card"><p class="eyebrow">PRIVATE TRIP PLAN</p><h1>新西兰南岛中东环线旅行计划</h1><p>请输入访客密码查看 11.14-11.28 悉尼 + 新西兰完整行程。</p><form id="gateForm"><input id="passcode" inputmode="numeric" placeholder="请输入 4 位密码" type="password"><button>进入行程</button></form><p id="error" style="display:none;color:#b42318;font-weight:900">密码不对，请再试一次。</p></section></main>
   <main class="app" id="app">
     <header class="topbar"><div class="brand"><span class="logo">NZ</span><div><strong>新西兰南岛中东环线旅行计划</strong><small>11.14-11.28 · 悉尼会合 + 南岛自驾</small></div></div><nav class="switch"><button class="active" data-view="map">地图版</button><button data-view="text">文字版</button></nav></header>
-    <section class="hero"><div class="hero-copy"><p class="eyebrow">11.14-11.28 · SYDNEY + SOUTH ISLAND</p><h1>新西兰南岛中东环线旅行计划</h1><p class="lead">备用 GitHub Pages 静态版：给朋友直接打开查看，保留密码、地图路线、每日计划、餐厅建议和 Google Maps 外链。</p><div class="chips"><span>悉尼 S1-S3</span><span>新西兰 D1-D12</span><span>中线进 · 东线返</span><span>密码 0000</span></div></div><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=80" alt="新西兰雪山湖泊"></section>
+    <section class="hero"><div class="hero-copy"><p class="eyebrow">11.14-11.28 · SYDNEY + SOUTH ISLAND</p><h1>新西兰南岛中东环线旅行计划</h1><p class="lead">备用 GitHub Pages 共享版：给朋友直接打开查看，保留密码、真实地图动态路线、每日计划、餐厅建议和 Google Maps 外链。</p><div class="chips"><span>悉尼 S1-S3</span><span>新西兰 D1-D12</span><span>中线进 · 东线返</span><span>密码 0000</span></div></div><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=80" alt="新西兰雪山湖泊"></section>
     <section class="summary"><div class="summary-card"><span>出发</span><strong>悉尼会合后飞 CHC</strong></div><div class="summary-card"><span>路线</span><strong>中线进 · 东线返</strong></div><div class="summary-card"><span>节奏</span><strong>12 天完整计划</strong></div><div class="summary-card"><span>地图</span><strong>Google 搜索外链</strong></div></section>
     <section class="view active" id="mapView">
     <section class="route-section" data-segment="sydney">
@@ -315,6 +315,22 @@
     const coordinates = {"Sydney Airport":[-33.9399,151.1753],"Queen Victoria Building":[-33.8718,151.2069],"Sydney Opera House":[-33.8568,151.2153],"Circular Quay":[-33.8611,151.2129],"Hyde Park Sydney":[-33.8731,151.211],"St Mary’s Cathedral Sydney":[-33.8713,151.2134],"Art Gallery of NSW":[-33.8688,151.2174],"Mrs Macquarie’s Chair":[-33.8595,151.2229],"Bondi Beach":[-33.8915,151.2767],"Tamarama Beach":[-33.8984,151.2711],"Bronte Beach":[-33.9019,151.2652],"Taronga Zoo Sydney":[-33.843,151.2412],"Christchurch Airport":[-43.4894,172.5322],"Cardboard Cathedral":[-43.532,172.6432],"New Regent Street":[-43.5296,172.6396],"Christchurch Tram":[-43.5311,172.6362],"Avon River Christchurch":[-43.5298,172.6306],"Christchurch Botanic Gardens":[-43.5309,172.6205],"Fairlie Bakehouse":[-44.1005,170.8289],"Lake Tekapo":[-44.0047,170.4771],"Church of the Good Shepherd":[-44.0047,170.4771],"Tekapo Stargazing":[-44.0047,170.4771],"Lake Pukaki Visitor Centre":[-44.1785,170.1656],"Mt Cook Alpine Salmon":[-44.1785,170.1656],"Peter's Lookout":[-44.107,170.123],"Hooker Valley Track":[-43.7185,170.0932],"Tasman Glacier":[-43.6906,170.172],"Twizel":[-44.2576,170.099],"Omarama":[-44.4874,169.9687],"Lindis Pass":[-44.5905,169.6408],"That Wanaka Tree":[-44.6972,169.1175],"Wanaka Station Park":[-44.7003,169.131],"Wanaka":[-44.6947,169.1417],"Cardrona Hotel":[-44.8768,169.0007],"Crown Range Road Scenic Lookout":[-44.999,168.926],"Arrowtown":[-44.9382,168.8356],"Gibbston Valley Winery":[-45.0206,168.9484],"Queenstown":[-45.0312,168.6626],"Queenstown Airport":[-45.0211,168.7392],"Skyline Queenstown":[-45.0317,168.6547],"Queenstown Bay":[-45.0321,168.6591],"Queenstown Bungy Centre":[-45.0318,168.6608],"Nevis Playground":[-45.1472,168.7903],"Shotover Jet":[-44.9845,168.6636],"Kai KikoKiko":[-45.0314,168.6606],"Queenstown Gardens":[-45.0354,168.6603],"Onsen Hot Pools":[-44.9869,168.6883],"Queenstown Mall":[-45.0316,168.6609],"Cromwell":[-45.0384,169.2003],"Alexandra":[-45.2492,169.3797],"Dunedin Railway Station":[-45.8753,170.5081],"Little India Dunedin":[-45.8759,170.5015],"Sandfly Bay":[-45.8946,170.6417],"Moeraki Boulders":[-45.3455,170.8262],"Kātiki Point Lighthouse":[-45.4208,170.8948],"Oamaru Blue Penguin Colony":[-45.0992,170.9779],"Oamaru":[-45.0976,170.9704],"Oamaru Victorian Precinct":[-45.1016,170.9701],"Timaru":[-44.3969,171.2549],"Caroline Bay":[-44.389,171.257],"Christchurch":[-43.5321,172.6362],"International Antarctic Centre":[-43.4886,172.5443]};
     const state = {};
     const mapState = new WeakMap();
+    const mapViewportSettings = {
+      sydney: {
+        defaultZoom: 12,
+        fitMaxZoom: 13,
+        minZoom: 10,
+        singleZoom: 13,
+        bounds: [[-34.08, 150.94], [-33.73, 151.38]]
+      },
+      nz: {
+        defaultZoom: 7,
+        fitMaxZoom: 11,
+        minZoom: 6,
+        singleZoom: 10,
+        bounds: [[-46.2, 167.85], [-43.15, 173.25]]
+      }
+    };
     function mapLink(query, segment = "nz") {
       const suffix = segment === "sydney" ? " Sydney Australia" : " New Zealand";
       return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(query + suffix);
@@ -343,13 +359,20 @@
       let holder = mapState.get(section);
       if (holder) return holder;
       const element = section.querySelector(".real-map");
-      const map = L.map(element, { scrollWheelZoom: false, zoomControl: true });
+      const viewport = mapViewportSettings[day.segment];
+      const map = L.map(element, {
+        maxBounds: L.latLngBounds(viewport.bounds).pad(0.45),
+        maxBoundsViscosity: 0.86,
+        minZoom: viewport.minZoom,
+        scrollWheelZoom: false,
+        zoomControl: true
+      });
       L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         maxZoom: 18
       }).addTo(map);
       const center = day.center || [0, 0];
-      map.setView(center, day.segment === "sydney" ? 12 : 7);
+      map.setView(center, viewport.defaultZoom);
       holder = { map, layers: L.layerGroup().addTo(map) };
       mapState.set(section, holder);
       return holder;
@@ -392,9 +415,13 @@
             zIndexOffset: 1000
           }).addTo(layers);
         });
-        map.fitBounds(L.latLngBounds(route), { padding: [42, 42], animate: true });
+        map.fitBounds(L.latLngBounds(route), {
+          animate: true,
+          maxZoom: mapViewportSettings[day.segment].fitMaxZoom,
+          padding: [42, 42]
+        });
       } else if (route[0]) {
-        map.flyTo(route[0], day.segment === "sydney" ? 12 : 10, { duration: .7 });
+        map.flyTo(route[0], mapViewportSettings[day.segment].singleZoom, { duration: .7 });
       }
       setTimeout(() => map.invalidateSize(), 60);
     }
